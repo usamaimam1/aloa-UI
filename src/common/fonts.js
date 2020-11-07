@@ -1,7 +1,8 @@
 import React from 'react'
+import { Platform } from 'react-native'
 export default {
     HeavyOblique: 'FuturaPTHeavyOblique',
-    Bold: 'FuturaPTBold',
+    Bold: Platform.select({ ios: 'Futura-Bold', android: 'FuturaPTBold' }),
     BoldOblique: 'FuturaPTBoldOblique',
     Book: 'FuturaPTBook',
     BookOblique: 'FuturaPTBookOblique',
@@ -18,8 +19,8 @@ export default {
     ExtraBold: 'FuturaPTExtraBold',
     ExtraBoldOblique: 'FuturaPTExtraBoldOblique',
     Heavy: 'FuturaPTHeavy',
-    Light: 'FuturaPTLight',
+    Light: Platform.select({ ios: 'Futura', android: 'FuturaPTLight' }),
     LightOblique: 'FuturaPTLightOblique',
-    Medium: 'FuturaPTMedium',
+    Medium: Platform.select({ ios: 'Futura-Medium', android: 'FuturaPTMedium' }),
     MediumOblique: 'FuturaPTMediumOblique'
 }
