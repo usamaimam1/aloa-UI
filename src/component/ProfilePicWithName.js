@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import Colors from '../common/colors';
+import fonts from '../common/fonts';
 
 const ProfilePicWithName = () => (
     <View style={{ flex: 1, }}>
@@ -35,8 +36,8 @@ const ProfilePicWithName = () => (
             </View>
         </View>
         <View style={{ flex: 3, justifyContent: "center", alignItems: "center" }}>
-            <Text style={{ fontWeight: "bold", fontSize: 26 }}>Verna Elonna</Text>
-            <Text style={{ color: Colors.primary, fontSize: 18 }}>Proximus</Text>
+            <Text style={{ fontFamily: fonts.Bold, fontSize: 26 }}>Verna Elonna</Text>
+            <Text style={{ color: Colors.primary, fontSize: 19,fontFamily:fonts.Medium }}>Proximus</Text>
         </View>
     </View>
 )

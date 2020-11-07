@@ -6,6 +6,7 @@ import CalendarStrip from 'react-native-calendar-strip';
 import Colors from '../common/colors';
 import { initialWindowMetrics } from "react-native-safe-area-context";
 import moment from 'moment'
+import fonts from "../common/fonts";
 const callDatas = [
     {
         userName: 'Pater kingston',
@@ -62,13 +63,13 @@ const PersonalAssistance = () => {
                                         <Text style={styles.toggleText}>Toggle call Forwarding</Text>
                                     </View>
                                     <View style={{ flex: 1 }}>
-                                        <Text style={{ fontSize: 12 }}>Enable of disable your personal assistance or when busy</Text>
+                                        <Text style={{ fontSize: 12, fontFamily: fonts.Medium }}>Enable of disable your personal assistance or when busy</Text>
                                     </View>
                                     <View style={{ flex: 1 }}>
                                         <TouchableOpacity
                                             // onPress={()>al}
                                             style={styles.toggleBtnView}>
-                                            <Text style={{ color: '#fff', fontSize: 13, fontWeight: "bold" }}>Toggle Setting</Text>
+                                            <Text style={{ color: '#fff', fontSize: 13, fontFamily: fonts.Bold }}>Toggle Setting</Text>
                                         </TouchableOpacity>
                                     </View>
                                 </View>
@@ -107,15 +108,15 @@ const PersonalAssistance = () => {
                         <CalendarStrip
                             scrollable
                             style={{ height: 100, width: '100%', marginBottom: 0, borderWidth: 0 }}
-                            calendarHeaderStyle={{ color: 'black', marginTop: -4, fontSize: 18, fontWeight: "normal" }}
-                            dateNameStyle={{ color: 'grey', borderBottomLeftRadius: 7, borderBottomRightRadius: 7, backgroundColor: '#fff', marginBottom: -38, width: 34, height: 20, paddingTop: 4, paddingHorizontal: 5, overflow: 'hidden' }}
-                            dateNumberStyle={{ color: 'black', borderTopLeftRadius: 7, borderTopRightRadius: 7, backgroundColor: '#fff', paddingTop: 1, width: 34, height: 20, paddingHorizontal: 5, overflow: 'hidden' }}
+                            calendarHeaderStyle={{ color: 'black', marginTop: -4, fontSize: 18, fontFamily: fonts.Medium }}
+                            dateNameStyle={{ fontFamily: fonts.Medium, color: 'grey', borderBottomLeftRadius: 7, borderBottomRightRadius: 7, backgroundColor: '#fff', marginBottom: -38, width: 34, height: 20, paddingTop: 4, paddingHorizontal: 5, overflow: 'hidden' }}
+                            dateNumberStyle={{ fontFamily: fonts.Bold, color: 'black', borderTopLeftRadius: 7, borderTopRightRadius: 7, backgroundColor: '#fff', paddingTop: 1, width: 34, height: 20, paddingHorizontal: 5, overflow: 'hidden' }}
                             iconContainer={{ flex: 0.1 }}
                             iconLeft={false}
                             iconRight={false}
                             headerText={`${month} ${yearChange}`}
-                            highlightDateNameStyle={{ color: '#fff', borderBottomLeftRadius: 7, borderBottomRightRadius: 7, backgroundColor: '#6a5acd', marginBottom: -38, width: 34, height: 20, paddingTop: 4, paddingHorizontal: 5, overflow: 'hidden' }}
-                            highlightDateNumberStyle={{ color: '#fff', borderTopLeftRadius: 7, borderTopRightRadius: 7, backgroundColor: '#6a5acd', paddingTop: 1, width: 34, height: 20, paddingHorizontal: 5, overflow: 'hidden' }}
+                            highlightDateNameStyle={{ fontFamily: fonts.Medium, color: '#fff', borderBottomLeftRadius: 7, borderBottomRightRadius: 7, backgroundColor: '#6a5acd', marginBottom: -38, width: 34, height: 20, paddingTop: 4, paddingHorizontal: 5, overflow: 'hidden' }}
+                            highlightDateNumberStyle={{ fontFamily: fonts.Bold, color: '#fff', borderTopLeftRadius: 7, borderTopRightRadius: 7, backgroundColor: '#6a5acd', paddingTop: 1, width: 34, height: 20, paddingHorizontal: 5, overflow: 'hidden' }}
                             selectedDate={dates}
                         // customDatesStyles={customDatesStylesFunc}
                         />
@@ -148,7 +149,7 @@ const PersonalAssistance = () => {
                                                     <View style={{ flex: 0.8, flexDirection: 'row', alignItems: 'center' }}>
                                                         <View style={styles.timeIcon}>
                                                             <AntDesign name="clockcircleo" />
-                                                            <Text style={{ fontSize: 12, marginLeft: 5 }}>{key.time}</Text>
+                                                            <Text style={{ fontSize: 12, marginLeft: 5, fontFamily: fonts.Medium }}>{key.time}</Text>
                                                         </View>
                                                         <TouchableOpacity activeOpacity={0.5}>
                                                             <View style={styles.callIconView}>
@@ -160,7 +161,7 @@ const PersonalAssistance = () => {
 
 
                                                 <View style={{ flex: 1, paddingHorizontal: 5 }}>
-                                                    <Text style={{ fontSize: 12, color: 'grey', }}>
+                                                    <Text style={{ fontSize: 14, color: 'grey', fontFamily: fonts.Medium }}>
                                                         {key.text}
                                                     </Text>
                                                 </View>
@@ -172,7 +173,7 @@ const PersonalAssistance = () => {
                                                             // style={{ color: 'red' }}
                                                             tintColors={{ true: Colors.reverse, }}
                                                         />
-                                                        <Text style={{ fontWeight: '600', alignItems: 'center', fontSize: 10, }}>   Asked to be called back</Text>
+                                                        <Text style={{ fontFamily: fonts.Medium, alignItems: 'center', fontSize: 12, }}>   Asked to be called back</Text>
 
                                                     </View>
                                                     <View style={{ flex: 0.6, flexDirection: 'row', alignItems: 'center' }}>
@@ -201,10 +202,10 @@ const PersonalAssistance = () => {
 const styles = StyleSheet.create({
     headerView: { flex: 1, backgroundColor: Colors.primary, borderBottomEndRadius: 30, borderBottomStartRadius: 30 },
     headingView: { flex: 1, alignItems: 'center', },
-    headingText: { color: '#fff', fontSize: 18, marginTop: 10 + initialWindowMetrics.insets.top },
+    headingText: { color: '#fff', fontSize: 18, marginTop: 10 + initialWindowMetrics.insets.top, fontFamily: fonts.Bold },
     toggleView: { flex: 0.5, alignItems: 'center', justifyContent: 'center', marginTop: initialWindowMetrics.insets.top },
     toggleCard: { flexDirection: 'row', overflow: 'hidden', borderRadius: 20, elevation: 1, padding: 20, height: 145, width: '90%', backgroundColor: '#fff', marginTop: 30 },
-    toggleText: { fontWeight: 'bold', color: '#6a5acd', fontSize: 16, fontFamily: 'arial' },
+    toggleText: { fontFamily: fonts.Bold, color: '#6a5acd', fontSize: 16, },
     toggleBtnView: { borderRadius: 10, width: '60%', height: 40, backgroundColor: Colors.reverse, alignItems: 'center', justifyContent: 'center' },
     image: { height: 145, width: 128, marginTop: -20, },
     calendarView: { flex: 1, justifyContent: 'flex-end', marginTop: 2 + initialWindowMetrics.insets.top },
@@ -212,17 +213,17 @@ const styles = StyleSheet.create({
     backIcon: { height: 35, width: 35, alignItems: 'center', justifyContent: 'center', borderRadius: 17.5, borderWidth: 1, borderColor: 'lightgrey' },
     nextIcon: { height: 35, position: 'relative', width: 35, alignItems: 'center', justifyContent: 'center', borderRadius: 17.5, borderWidth: 1, borderColor: 'lightgrey' },
     callDetailsView: { flex: 2.3, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fffafa' },
-    loggedCallText: { borderRadius: 25, fontSize: 12, borderColor: 'lightgrey', color: 'grey', fontWeight: '600', borderWidth: 1, width: 130, textAlign: 'center', padding: 8 },
+    loggedCallText: { borderRadius: 25, fontSize: 14, borderColor: 'lightgrey', color: 'grey', fontFamily: fonts.Medium, borderWidth: 1, width: 130, textAlign: 'center', padding: 8 },
     callDetailsCard: { width: '100%', alignItems: 'center', flex: 2, },
     callDetailsCard2: { padding: 15, borderRadius: 10, width: '90%', marginBottom: "2%", backgroundColor: "#FFFAFA", elevation: 8, },
     nameAndTimeView: { flex: 1, flexDirection: 'row', justifyContent: 'center', marginBottom: 2 },
     nameView: { flex: 1.3, flexDirection: 'row', alignItems: 'center' },
     profileIcon: { height: 27, width: 27, alignItems: 'center', justifyContent: 'center', borderRadius: 15, borderWidth: 1, borderColor: 'lightgrey' },
-    userName: { fontWeight: 'bold', alignItems: 'center', marginLeft: 10, fontSize: 16 },
+    userName: { fontFamily: fonts.Bold, alignItems: 'center', marginLeft: 10, fontSize: 16 },
     timeIcon: { flexDirection: 'row', height: 35, width: 80, alignItems: 'center', justifyContent: 'center', borderRadius: 10, backgroundColor: Colors.secondary, },
     callIconView: { height: 27, marginLeft: 5, width: 27, alignItems: 'center', justifyContent: 'center', borderRadius: 15, backgroundColor: '#40e0d0' },
     detailsBtnView: { flexDirection: 'row', height: 30, width: 80, alignItems: 'center', justifyContent: 'center', borderRadius: 10, backgroundColor: Colors.primary },
-    detailsBtnText: { fontSize: 12, color: '#fff', fontSize: 10 },
+    detailsBtnText: { fontSize: 12, color: '#fff', fontSize: 11, fontFamily: fonts.Medium },
 
 });
 

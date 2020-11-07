@@ -6,6 +6,7 @@ import CustomTextInput from '../../component/CustomTextInput';
 import CountryCodePicker from '../../component/CountryCodePicker';
 import { Actions } from 'react-native-router-flux';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import fonts from '../../common/fonts';
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').screenWidth;
 
@@ -36,8 +37,8 @@ const SignIn = ({ imgPath, dialCode }) => {
                     resizeMode="contain"
                     source={require('../../assets/smartphone.png')}
                 />
-                <Text style={{ fontWeight: "bold", fontSize: 25 }}>{`Login with Phone`}</Text>
-                <Text style={{ textAlign: "center", width: "70%", color: "grey", marginTop: 20, fontSize: 12 }}>{`Please enter your phone number. We will send verification code on your phone number`}</Text>
+                <Text style={{ fontFamily: fonts.Bold, fontSize: 25 }}>{`Login with Phone`}</Text>
+                <Text style={{ fontFamily: fonts.Medium, textAlign: "center", width: "70%", color: "grey", marginTop: 20, fontSize: 12 }}>{`Please enter your phone number. We will send verification code on your phone number`}</Text>
                 <View style={{ marginTop: 20, width: "90%", flexDirection: "row", justifyContent: "space-between" }}>
                     <CountryCodePicker imgPath={imgPath} dialCode={dialCode} />
                     <CustomTextInput placeHolder={`Phone number`} defaultVal={phoneNumber} _onNumChange={(num) => setPhoneNumber(num)} />

@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import Colors from '../common/colors';
+import fonts from '../common/fonts';
 
 const CustomHeader = ({ iconRight, iconLeft }) => (
     <View style={styles.header}>
@@ -9,7 +10,7 @@ const CustomHeader = ({ iconRight, iconLeft }) => (
             {iconLeft && iconLeft}
         </TouchableOpacity>
         <View style={{ flex: 7, alignItems: "center" }}>
-            <Text style={{ color: Colors.white, fontSize: 18 }}>Profile</Text>
+            <Text style={{ color: Colors.white, fontSize: 18, fontFamily: fonts.Bold }}>Profile</Text>
         </View>
         <TouchableOpacity style={{ flex: 1, }}>
             {iconRight && iconRight}

@@ -7,6 +7,7 @@ import FlagImgs from '../component/flagsImages'
 import flags from '../services/resources/flags/index'
 import { Actions } from 'react-native-router-flux'
 import { initialWindowMetrics } from "react-native-safe-area-context";
+import fonts from "../common/fonts";
 let countrysList = require('../services/resources/countries.json');
 
 class CountryLists extends Component {
@@ -38,7 +39,7 @@ class CountryLists extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <Text style={{ fontSize: 25, fontWeight: "bold" }}>Country</Text>
+                    <Text style={{ fontSize: 25, fontFamily: fonts.Bold }}>Country</Text>
                     <View style={styles.inputSearchBar}>
                         <View style={styles.inputSearchBarChild}>
                             <Feather name="search" style={styles.iconSearch} />
@@ -48,6 +49,7 @@ class CountryLists extends Component {
                                 onChangeText={(search) => { this.setState({ search: search.split(' ') }) }}
                                 value={search[0]}
                                 placeholder={"Search"}
+                                style={{ fontFamily: fonts.Medium }}
                             />
                         </View>
                         <TouchableOpacity style={styles.inputSearchBarChild}>
@@ -76,10 +78,10 @@ class CountryLists extends Component {
                                             </TouchableOpacity>
                                         </View>
                                         <View style={styles.countryName}>
-                                            <Text style={{ marginLeft: 15 }}>{item.name}</Text>
+                                            <Text style={{ marginLeft: 15, fontFamily: fonts.Medium }}>{item.name}</Text>
                                         </View>
                                         <View style={styles.countryCode}>
-                                            <Text style={{ marginRight: 10, color: "#4267B2", fontWeight: "bold" }}>+{item.dialCode}</Text>
+                                            <Text style={{ marginRight: 10, color: "#4267B2", fontFamily: fonts.Bold }}>+{item.dialCode}</Text>
                                         </View>
                                     </TouchableOpacity>
                                 )

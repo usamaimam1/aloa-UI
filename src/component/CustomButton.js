@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, TouchableOpacity } from 'react-native';
 import Colors from '../common/colors';
+import fonts from '../common/fonts';
 
 export default CustomButton = ({ label, _login }) => {
     return (
@@ -12,7 +13,8 @@ export default CustomButton = ({ label, _login }) => {
             }}>
             <Text style={{
                 alignSelf: "center", color: "white",
-                fontWeight: "bold", fontSize: 18
+                fontSize: 18,
+                fontFamily: fonts.Bold
             }}>
                 {label}
             </Text>

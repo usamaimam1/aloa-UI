@@ -37,6 +37,7 @@ import {
 } from 'react-native';
 import FlagsImg from './flagsImages'
 import { Actions } from 'react-native-router-flux'
+import fonts from "../common/fonts";
 
 class CountryCodePicker extends Component {
   constructor(props) {
@@ -73,7 +74,7 @@ class CountryCodePicker extends Component {
         style={{ flexDirection: "row", padding: 15, backgroundColor: "#FFFFFF", borderColor: "grey", borderWidth: 0.2, borderRadius: 15, height: 50, justifyContent: "space-around", alignItems: "center" }}
       >
         <FlagsImg height={20} width={20} imgPath={imgPath} />
-        <Text style={{ fontWeight: "bold", paddingHorizontal: 2.5, paddingTop: 2.5 }}>{"+" + dialCode}</Text>
+        <Text style={{ fontFamily: fonts.Bold, paddingHorizontal: 2.5, paddingTop: 2.5 }}>{"+" + dialCode}</Text>
       </TouchableOpacity>
     );
   }

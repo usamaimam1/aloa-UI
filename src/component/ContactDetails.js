@@ -2,6 +2,7 @@ import React from 'react'
 import { Dimensions, View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import Colors from '../common/colors';
+import fonts from '../common/fonts';
 const screenHeight = Dimensions.get('window').height;
 
 const ContactDetails = ({ }) => (
@@ -11,7 +12,7 @@ const ContactDetails = ({ }) => (
                 Contact Detail
             </Text>
             <View style={styles.detail}>
-                <Text style={{ fontSize: 16, }}>
+                <Text style={{ fontSize: 16, fontFamily: fonts.Medium }}>
                     Phone Number
                 </Text>
                 <Text style={styles.phoneEmail}>
@@ -19,7 +20,7 @@ const ContactDetails = ({ }) => (
                 </Text>
             </View>
             <View style={[styles.detail, { backgroundColor: 'rgba(92, 50, 31, 0.07)' }]}>
-                <Text style={{ fontSize: 16, }}>
+                <Text style={{ fontSize: 16, fontFamily: fonts.Medium }}>
                     Email Address
                 </Text>
                 <Text style={[styles.phoneEmail, { color: Colors.primary }]}>
@@ -65,10 +66,10 @@ const styles = StyleSheet.create({
     detail: {
         paddingHorizontal: "5%", marginTop: "3%", backgroundColor: 'rgba(0, 217, 182, 0.1)', height: 55, borderRadius: 10, flexDirection: "row", justifyContent: "space-between", alignItems: "center"
     },
-    phoneEmail: { fontWeight: "bold", fontSize: 18, color: Colors.reverse },
-    heading: { fontWeight: "bold", fontSize: 20, marginTop: "3%" },
+    phoneEmail: { fontFamily: fonts.Bold, fontSize: 18, color: Colors.reverse },
+    heading: { fontFamily: fonts.Bold, fontSize: 20, marginTop: "3%" },
     logContainer: { flexDirection: "row", marginBottom: 25, flex: 1, justifyContent: "space-between", marginTop: "2%" },
     logCalls: { justifyContent: "center", alignItems: "center", borderRadius: 15, elevation: 1, height: "100%", flex: 0.48, height: screenHeight / 5 },
-    noOfCall: { fontWeight: "bold", fontSize: 40, marginTop: "3%" },
-    logCallTxt: { fontSize: 16, marginTop: "3%", width: "50%", color: "grey", textAlign: "center" },
+    noOfCall: { fontFamily: fonts.Bold, fontSize: 40, marginTop: "3%" },
+    logCallTxt: { fontSize: 16, marginTop: "3%", width: "50%", color: "grey", textAlign: "center", fontFamily: fonts.Medium },
 });
