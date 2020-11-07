@@ -1,0 +1,25 @@
+import React from 'react'
+export default {
+    HeavyOblique: 'FuturaPTHeavyOblique',
+    Bold: 'FuturaPTBold',
+    BoldOblique: 'FuturaPTBoldOblique',
+    Book: 'FuturaPTBook',
+    BookOblique: 'FuturaPTBookOblique',
+    CondBold: 'FuturaPTCondBold',
+    CondBoldOblique: 'FuturaPTCondBoldOblique',
+    CondBook: 'FuturaPTCondBook',
+    CondBookOblique: 'FuturaPTCondBookOblique',
+    CondExtraBold: 'FuturaPTCondExtraBold',
+    CondExtraBoldOblique: 'CondExtraBoldOblique',
+    CondMedium: 'FuturaPTCondMedium',
+    CondMediumOblique: 'FuturaPTCondMediumOblique',
+    Demi: 'FuturaPTDemi',
+    DemiOblique: 'FuturaPTDemiOblique',
+    ExtraBold: 'FuturaPTExtraBold',
+    ExtraBoldOblique: 'FuturaPTExtraBoldOblique',
+    Heavy: 'FuturaPTHeavy',
+    Light: 'FuturaPTLight',
+    LightOblique: 'FuturaPTLightOblique',
+    Medium: 'FuturaPTMedium',
+    MediumOblique: 'FuturaPTMediumOblique'
+}
