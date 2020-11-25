@@ -13,6 +13,7 @@ target 'aloaProject' do
     # Pods for testing
   end
 
+  pod 'RNCharts', :path => '../node_modules/react-native-charts-wrapper'
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
