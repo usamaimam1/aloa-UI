@@ -7,6 +7,7 @@ import Colors from '../common/colors';
 import { initialWindowMetrics } from "react-native-safe-area-context";
 import moment from 'moment'
 import fonts from "../common/fonts";
+import { Actions } from "react-native-router-flux";
 const callDatas = [
     {
         userName: 'Pater kingston',
@@ -178,10 +179,10 @@ const PersonalAssistance = () => {
                                                     </View>
                                                     <View style={{ flex: 0.6, flexDirection: 'row', alignItems: 'center' }}>
                                                         <TouchableOpacity activeOpacity={0.5}>
-                                                            <View style={styles.detailsBtnView}>
+                                                            <TouchableOpacity onPress={() => { Actions.Stats() }} style={styles.detailsBtnView}>
                                                                 <Text style={styles.detailsBtnText}>See Details</Text>
                                                                 <AntDesign style={styles.detailsBtnText} name="right" />
-                                                            </View>
+                                                            </TouchableOpacity>
                                                         </TouchableOpacity>
                                                     </View>
 

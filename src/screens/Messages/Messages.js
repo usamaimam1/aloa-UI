@@ -25,7 +25,7 @@ class Messages extends React.Component {
             },
             data: {
                 dataSets: [{
-                    values: [{ y: 100 }, { y: 105 }, { y: 102 }, { y: 110 }, { y: 114 },],
+                    values: [{ y: 112 }, { y: 120 }, { y: 102 }, { y: 110 }, { y: 114 },],
                     label: 'Bar dataSet',
                     config: {
                         color: processColor('teal'),

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, Switch } from 'react-native'
+import { View, Text, StyleSheet, Image, Switch, TextInput } from 'react-native'
 import colors from '../../common/colors'
 import fonts from '../../common/fonts'
 import CustomFooter from '../../component/CustomFooter'
@@ -9,7 +9,9 @@ class Settings extends React.Component {
         super(props)
         this.state = {
             enablePersonalGreetings: false,
-            sendEmail:false
+            sendEmail: false,
+
+            message: null,
         }
     }
     componentDidMount() {
@@ -36,16 +38,23 @@ class Settings extends React.Component {
                             <Switch style={{ color: colors.primary }} value={this.state.enablePersonalGreetings} onValueChange={val => this.setState({ enablePersonalGreetings: val })} />
                         </View>
                         <View style={styles.SettingsMessageView}>
-                            <Text style={styles.SettingsMessageText}>
-                                Good day!
+                            <TextInput
+                                placeholder="Welcome at Aloa, how can we help you?"
+                                placeholderTextColor="grey"
+                                value={this.state.message}
+                                onValueChange={val => this.setState({ message: val })}
+                                style={styles.SettingsMessageText}
+                            />
+                            {/* <Text style={styles.SettingsMessageText}>
+
                             </Text>
                             <Text style={styles.SettingsMessageText}>
-                                Welcome at Aloa, how can we help you?
-                            </Text>
+                               
+                            </Text> */}
                         </View>
                         <View style={styles.LastSettingRow}>
                             <View style={{ width: "85%" }}>
-                                <Text style={[styles.SettingTitle,{color:colors.primary}]}>Automatically send me an emailwhen I have a missed call</Text>
+                                <Text style={[styles.SettingTitle, { color: colors.primary }]}>Automatically send me an emailwhen I have a missed call</Text>
                             </View>
                             <Switch style={{ color: colors.primary }} value={this.state.sendEmail} onValueChange={val => this.setState({ sendEmail: val })} />
                         </View>
