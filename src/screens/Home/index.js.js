@@ -8,11 +8,11 @@ const Home = ({ }) => {
     return (
         <View style={{ flex: 1 }}>
             {/* body */}
-            <View style={{ flex: 8.7, }}>
+            <View style={{ flex: 9, borderWidth: 0}}>
                 <TextInANest />
             </View>
             {/* Footer */}
-            <View style={{ flex: 1.3, }}>
+            <View style={{ flex: 1, }}>
                 <CustomFooter />
             </View>
         </View>

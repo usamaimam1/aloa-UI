@@ -35,7 +35,7 @@ const Profile = () => (
             </View>
         </View>
         {/* Footer */}
-        <View style={{ flex: 1.3, }}>
+        <View style={{ flex: 1, }}>
             <CustomFooter />
         </View>
     </View>

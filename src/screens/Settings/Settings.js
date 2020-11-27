@@ -61,7 +61,7 @@ class Settings extends React.Component {
                     </View>
                 </View>
                 {/* Footer */}
-                <View style={{ flex: 1.3, }}>
+                <View style={{ flex: 1, }}>
                     <CustomFooter />
                 </View>
             </View>

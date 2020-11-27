@@ -64,7 +64,7 @@ const PersonalAssistance = () => {
                                         <Text style={styles.toggleText}>Toggle call Forwarding</Text>
                                     </View>
                                     <View style={{ flex: 1 }}>
-                                        <Text style={{ fontSize: 12, fontFamily: fonts.Medium }}>Enable of disable your personal assistance or when busy</Text>
+                                        <Text style={{ fontSize: 11, fontFamily: fonts.Medium }}>Enable of disable your personal assistance or when busy</Text>
                                     </View>
                                     <View style={{ flex: 1 }}>
                                         <TouchableOpacity
@@ -124,7 +124,7 @@ const PersonalAssistance = () => {
                     </View>
 
                 </View>
-                <ScrollView style={{ flex: 2.5 }}>
+                <ScrollView style={{ flex: 2.7 }}>
                     <View style={styles.callDetailsView}>
                         <View style={{ flex: 0.3, justifyContent: "center", marginVertical: "4%" }}>
                             <Text style={[styles.loggedCallText, {}]}> 3 Logged call</Text>
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
     headingText: { color: '#fff', fontSize: 18, marginTop: 10 + initialWindowMetrics.insets.top, fontFamily: fonts.Bold },
     toggleView: { flex: 0.5, alignItems: 'center', justifyContent: 'center', marginTop: initialWindowMetrics.insets.top },
     toggleCard: { flexDirection: 'row', overflow: 'hidden', borderRadius: 20, elevation: 1, padding: 20, height: 145, width: '90%', backgroundColor: '#fff', marginTop: 30 },
-    toggleText: { fontFamily: fonts.Bold, color: '#6a5acd', fontSize: 16, },
+    toggleText: { fontFamily: fonts.Bold, color: '#6a5acd', fontSize: 14.5, },
     toggleBtnView: { borderRadius: 10, width: '60%', height: 40, backgroundColor: Colors.reverse, alignItems: 'center', justifyContent: 'center' },
     image: { height: 145, width: 128, marginTop: -20, },
     calendarView: { flex: 1, justifyContent: 'flex-end', marginTop: 2 + initialWindowMetrics.insets.top },
